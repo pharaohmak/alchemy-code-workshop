@@ -1,0 +1,524 @@
+/* Essential CSS Properties */
+
+* {
+    display: none; /* inline, block, inline-block, none */
+    width: none; /* px, em, rem, %, auto */
+    height: none; /* px, em, rem, %, auto */
+    margin: none; /* margin-top margin-left, margin- right, margin-bottom */
+    padding: none; /* padding-top, padding-left, padding-right, padding-bottom */
+    border: none; /* border-width, border-style, border-color */
+    float: none; /* left, right, none */
+    clear: none; /* clear floats: overflow: hidden, clearfix */
+    color: black;/* text color */
+    background: none; /* background-color, background-image, background-repeat, background-position */
+}
+
+
+/* Styling font */
+.content {
+    font-style: none; 
+    font-variant: none; 
+    font-weight: none;
+    font-size: none;
+    line-height: none;
+    font-family: none;
+
+}
+/* Custom fonts */
+
+/* font descriptors */
+
+@font-face {
+    font-family: myFirstFont; /* required. defines a name for the font */
+    src: url(sansation.woff); /* required. defines the URL of the font file */
+    font-stretch: normal; /* optional. defines how the font should be stretched. default is 'normal' */
+    font-style: normal; /* optional. defines how the font should be styled. default is 'normal' */
+    font-weight: normal; /* optional. defines the boldness of the font. default is 'normal'*/
+    unicode-range: U+00-7F; /* optional. defines the range UNICODE characters the font supports. default is 'U+0-10FFF' */
+}
+
+/* using the font you want */
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff)
+}
+
+div {
+    font-family: myFirstFont;
+}
+
+/* using bold text */
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_bold.woff);
+    font-weight: bold;
+}
+
+
+/* Selectors and pseudo selectors */
+/* pseudo elements */
+
+/* Selects the first line of each <p> element */
+p::first-line {
+    color: #ff0000;
+    font: small-caps;
+    background: fixed;
+    word-spacing: auto;
+    letter-spacing: normal;
+    text-decoration: dashed;
+    vertical-align: auto;
+    text-transform: capitalize;
+    line-height: normal;
+    clear: both;
+}
+
+/* Selects the first letter of each <p> element */
+p::first-letter {
+    font: 100; 
+    color: #ff0000;  
+    background: fixed;
+    margin: auto; 
+    padding: 0%; 
+    border : #ff0000;
+    text-decoration: dashed;
+    vertical-align: auto; /*(only if "float" is "none")*/
+    text-transform: capitalize;
+    line-height: normal;
+    float: inline-end;
+    clear: both;
+}
+
+/* Insert something before the content of each <p> element */
+h1::before {
+    content: url(smiley.gif);
+}
+
+/* Insert something after the content of each <p> element */
+h1::after {
+    content: url(smiley.gif); 
+}
+
+/* Selects the markers of list items */
+::marker {
+    color: red;
+    font-size: 23px;
+}
+
+/*Selects the portion of an element that is selected by a user */
+::selection {
+    color: red;
+    background: yellow;
+}
+
+/* pseudo classes */
+
+/* Selects the active link */
+:active	{
+    color: blue;
+}
+/* selects every checked <input> element */
+:checked {
+    background: orange;
+}
+
+/* selects every disabled <input> element */
+:disabled {
+    color: yellow;
+}	
+
+/* selects every <p> element that has no children */
+:empty {
+    color: salmon;
+}
+
+/* selects every enabled <input> element */
+:enabled {
+    background: rebeccapurple;
+}	
+
+/* selects every <p> elements that is the first child of its parent */
+:first-child {
+    font: 100;
+}	
+
+/* selects every <p> element that is the first <p> element of its parent */
+:first-of-type {
+    font-variant: normal;
+}	
+
+/* selects the <input> element that has focus */
+:focus {
+    color: #ff0000;
+}	
+
+/* selects links on mouse over */
+:hover {
+    background: fixed;
+}	
+
+/* selects <input> elements with a value within a specified range */
+:in-range {
+    color: aqua;
+}	
+
+/* selects all <input> elements with an invalid value */
+:invalid {
+    color: bisque;
+}	
+
+/* selects every <p> element with a lang attribute value */
+:lang(language) {
+    color: pink;
+}	
+
+/* selects every <p> element that is the last child of its parent */
+:last-child {
+    color: #ff0000;
+}	
+
+/* selects every <p> element that is the last <p> element of its parent */
+:last-of-type {
+    background: fixed;
+}	
+
+/* selects all unvisited links */
+:link {
+    color: antiquewhite;
+}	
+
+/* selects every element that is not a <p> element */
+:not(selector) {
+    color: yellow;
+}	
+
+/* selects every <p> element that is the second child of its parent */
+:nth-child(n) {
+    color: blue;
+}	
+
+/* selects every <p> element that is the second child of its parent, counting from the last child */
+:nth-last-child(n) {
+    background: fixed;
+}	
+
+/* selects every <p> element that is the second <p> element of its parent, counting from the last child */
+:nth-last-of-type(n) { 
+    color: honeydew;
+}	
+
+/* selects every <p> element that is the second <p> element of its parent */
+:nth-of-type(n)	{
+    background: fixed;
+} 
+
+/* selects every <p> element that is the only <p> element of its parent */
+:only-of-type {
+    color: bisque; 
+}	
+
+/* selects every <p> element that is the only child of its parent */
+:only-child {
+    background: fixed;
+}	
+
+/* selects <input> elements with no 'required' attribute */
+:optional {
+    color: aliceblue; 
+}	
+
+/* selects <input> elements with a value outside a specified range */
+:out-of-range {
+    background: fixed;
+}	
+
+/* selects <input> elements with a 'readonly' attribute specified */
+:read-only {
+    color: azure;
+}	
+
+/* selects <input> elements with no 'readonly' attribute */
+:read-write {
+    background: fixed;
+}	
+
+/* selects <input> elements with a 'required' attribute specified */
+:required {
+    color: khaki;
+}	
+
+/* selects the document's root element */
+:root {
+    background: fixed;
+}	
+
+/* selects the current active element (clicking on a URL containing that anchor name) */
+:target {
+    background: fixed;
+}	
+
+/* selects all <input> elements with a valid value */
+:valid {
+    color: green; 
+}	
+
+/* selects all visited links */
+:visited {
+    color: red;
+}	
+
+/* Selector specificity*/
+
+/* inline styles 
+An inline style is attached directly to the element to be styled. Example: <h1 style="color: #fffff;" */
+
+/* ids
+An ID is a unique identifier for the page element, such as #navbar */
+
+/* classes, attributes and pseudo-classes 
+This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc. */
+
+/* elements and pseudo-elements 
+This category includes element names and pseudo-elements, such as h1, div, :before and :after */
+
+
+/* Measurement units */
+
+.content {
+    /* Absolute Lengths */
+    width: 0cm; /* centimeters */
+    width: 0mm; /* millimeters */
+    width: 0in; /* inches (1in = 96px = 2.54cm) */
+    width: 0px; /* pixels (1px = 1/96th of 1in) */
+    width: 0pt; /* points (1pt = 1/72 of 1in) */
+    width: 0pc; /* picas (1pc = 12pt) */
+    /* Relative Lengths */
+    height: 0em; /* relative to the font-size of the element (2em means 2 times the size of the current font) */
+    height: 0ex; /* relative to the x-height of the current font (rarely used) */
+    height: 0ch; /* relative to the width of the '0' (zero) */
+    height: 0rem; /* relative to font-size of the root element */
+    height: 0vw; /* relative to 1% of the width of the viewpoint* */
+    height: 0vh; /* relative to 1% of the height of the viewpoint* */
+    height: 0vmin; /* relative to 1% of viewpoint's * smaller dimension */
+    height: 0vmax; /* relative to 1% of viewport's * larger dimension */
+    height: 0%; /* relative to the parent element*/
+}
+
+/* CSS Box Model */
+
+.content {
+    padding: none;
+    border: none;
+    margin: none;
+}
+
+/* Css Grids */
+
+/* display property */
+.grid-container {
+    display: grid;
+}
+
+.grid-container {
+    display: inline-grid;
+}
+
+/* grid gaps */
+/* the grid-column-gap property sets the gap between the columns */
+.grid-container {
+    display: grid;
+    grid-column-gap: 50px;
+}
+
+/* the grid-row-gab property sets the gap between the rows */
+.grid-container {
+    display: grid;
+    grid-row-gap: 50px;
+}
+
+/* the grid-gap property is a shorthand property for the grid-row-gap and the grid-column-gap properties */
+.grid-container {
+    display: grid;
+    grid-gap: 50px 100px;
+}
+
+/* grid lines */
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.item1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+/*all grid properties */
+
+.grid-container {
+    column-gap: normal; /* specifies the gap between the columns */
+    gap: inherit; /* a shorthand property for the row-gap and the column-gap properties */
+    grid: 0%; /* a shorthand property for the grid-template-rows, grid-template-columns ,grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties */
+    grid-area: auto; /* either specifies a name for the grid item, or this property is a shorthand property for the grid-row-start, grid-column-start, grid-row-end, and grid-column-end properties */
+    grid-auto-columns: auto; /* specifies a default column size */
+    grid-auto-flow: column; /* specifies how auto-placed items are inserted in the grid */
+    grid-auto-rows: auto; /* specifies a default row size */
+    grid-column: auto; /* a shorthand property for the grid-column-start and the grid-column-end properties */
+    grid-column-end: auto; /* specifies where to end the grid item */ 
+    grid-column-gap: 0ch; /* specifies the size of the gap between columns */
+    grid-column-start: auto; /* specifies where to start the grid item */ 
+    grid-gap: 0ch; /* a shorthand property for the grid-row-gap and grid-column gap properties */
+    grid-row: auto; /* a shorthand property for the grid-row-gap and the grid-column-gap properties */
+    grid-row-end: auto; /* specifies where to end the grid item */ 
+    grid-row-gap: 0ch; /* specifies the size of the gap between rows */
+    grid-row-start: auto; /* specifies where to start the grid item */
+    grid-template: auto; /* a shorthand property for the grid-template-rows, grid-template-columns and grid-areas properties */
+    grid-template-areas: none; /* specifies how to display columns and rows, using named grid items */
+    grid-template-columns: auto; /* specifies the size of the columns, and how many columns in a grid layout */
+    grid-template-rows: auto; /* specifies the size of the rows in a grid layout */
+    row-gap: inherit; /* specifies the gap between the grid rows */
+}
+
+
+/* Positioning */
+
+.content {
+    position: auto; /* static, relative, absolute, sticky, fixed */
+}
+
+
+/* Overflow */
+
+.content {
+    overflow: auto; /* auto, hidden, clip, scroll, visible */
+}
+
+
+/* Flexbox Cheat-sheet  */ 
+
+.content {
+    display: flex;
+}
+
+
+/* Responsive Images */
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Transformations */
+
+.content {
+    transform: none; /* Defines that there should be no transformations */
+    transform: matrix(n,n,n,n,n,n); /* Defines a 2D transformation, using a matrix of six values*/
+    transform: matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n); /* Defines a 3D transformation, using a 4x4 matrix of 16 values */
+    transform: translate(x,y); /* Defines a 2D translation */
+    transform: translate3d(x,y,z); /* Defines a 3D translation */
+    transform: translateX(x); /* Defines a translation, using only the value for the X-axis */
+    transform: translateY(y); /* Defines a translation, using  only the values for the Y-axis */
+    transform: translateZ(z); /* Defines a 3D translation, using only the values for the Z-axis */
+    transform: scale(x,y); /* Defines a 2D scale */
+    transform: scale3d(x,y,z); /* Defines a 3D scale transformation */
+    transform: scaleX(x); /* Defines a scale transformation by giving a value for the X-axis */
+    transform: scaleY(y); /* Defines a scale transformation by giving a value for the Y-axis */
+    transform: scaleZ(x); /* Defines a 3D scale transformation by giving a value for the Z-axis */
+    transform: rotate(angle); /* Defines a 2D rotation, the angle is specified in the parameter */
+    transform: rotate3d(x,y,z,angle); /* Defines a 3D rotation */
+    transform: rotateX(angle); /* Defines a 3D rotation along the X-axis */
+    transform: rotateY(angle); /* Defines a 3D rotation along the Y-axis */
+    transform: rotateZ(angle); /* Defines a 3D rotation along the Z-axis */
+    transform: skew(x-angle,y-angle); /* Defines a 2D skew transformation along the X- and the Y-axis */
+    transform: skewX(angle); /* Defines a 2D skew transformation along the X-axis */
+    transform: skewY(angle); /* Defines a 2D skew transformation along the Y-axis */
+    transform: perspective(n); /* Defines a perspective view for a 3D transformed element */
+    transform: initial; /* Sets this property to its default value */
+    transform: inherit; /* Inherits this property from its parent element */
+}
+
+
+/* Transitions */
+
+.content {
+    transition: width 2s; /* Must specify property and duration */
+    transition-delay: none; /* Specifies a delay (in seconds) for the transition effect */
+    transition-duration: none; /* Specifies how many seconds or milliseconds a transition effect takes to complete*/
+    transition-property: none; /* Specifies the name of the CSS property the transition effect is for */
+    transition-timing-function: ease; /* Specifies the speed curve of the transition effect */
+}
+
+/*transition-timing-function*/
+.content {
+    transition-timing-function: ease; /* Specifies a transition effect with a slow start, then fast, then end slowly */
+    transition-timing-function: linear; /* Specifies a transition effect with the same speed from start to end */
+    transition-timing-function: ease-in; /* Specifies a transition effect with a slow start */
+    transition-timing-function: ease-out; /* Specifies a transition effect with a slow end */
+    transition-timing-function: ease-in-out; /* Specifies a transition effect with a slow start and end */
+    transition-timing-function: cubic-bezier(n,n,n); /* Lets you define your own values in a cubic-bezier function */
+}
+
+
+/* CSS Animations */
+
+.content {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+/* Animations sub-properties */
+.content {
+    animation-name: none; /* Specifies the name of the @keyframes at-rule describing the animation's keyframes */
+    animation-duration: none; /* Configures the length of time that an animation should take to complete in one cycle */
+    animation-timing-function: none; /* Configures the timing of the animation; that is, how the animation transitions through keyframes, by establishing acceleration curves */
+    animation-delay: none; /* Configures the delay between the time the element is loaded and the beginning og the animation sequence */
+    animation-iteration-count: none; /* Configures the number of times the animation should repeat */
+    animation-direction: none; /* Configures whether or not the animation should alternate direction on each run through the sequence or reset to the start point and repeat itself */
+    animation-fill-mode: none; /* Configures what values are applied by the animation before and after it is executing */
+    animation-play-state: none; /* Lets you pause and resume the animation sequence */
+}
+
+
+/* Media Query */
+
+/* media types */
+
+/* used for computer screens, tablets, smart-phones etc. */
+@media screen and (max-width: 600px) {
+    div.example {
+      display: none;
+    }
+  }
+
+/* default. used for all media type devices */
+@media all {
+    body {
+        text-align: center;
+    }
+}
+
+/* used for printers */
+@media print {
+    body {
+      color: black;
+    }
+  }
+
+/* used for screen readers that 'reads' the page out loud */
+@media speech {
+    body {
+        font-size: large;
+    }
+}
