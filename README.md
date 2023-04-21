@@ -1,5 +1,5 @@
 
-# Alchemy Code.
+# Alchemy Code. Workshop
 
 
 ## Lessons 
