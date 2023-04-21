@@ -1,7 +1,5 @@
 
-# Alchemist's Workshop
-
-A brief description of what this project does and who it's for
+# Alchemy Code.
 
 
 ## Lessons 
@@ -10,7 +8,7 @@ A brief description of what this project does and who it's for
 - CSS Stylesheets
 - Javascript Fundimentals
 - Python Fundimentals
-- Operating System
+- Interacting with Operating Systems
 - Source Control
 - Troubleshooting & Debugging Techniques
 - Configuration Management and the Cloud
@@ -36,7 +34,7 @@ Here are some related projects
 
 ## Feedback
 
-If you have any feedback, please reach out to us at connect@sleepingpharaoh.com
+If you have any feedback, please reach out to me at connect@sleepingpharaoh.com
 
 
 ## Support
