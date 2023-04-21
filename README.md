@@ -18,7 +18,7 @@
 - Click to View Component
 
 
-## Roadmap
+## Career Paths
 
 - Frontend Engineering
 - Backend Engineering
@@ -27,13 +27,11 @@
 
 ## Related
 
-Here are some related projects
-
 - [CodeCademy Portfolio](https://github.com/matiassingers/awesome-readme)
-- [Frontend Mentor Portfolio]()
-- [Shopify Partners]()
-- [Fiverr Gigs]()
-- [Upwork Profile]()
+- [Frontend Mentor Portfolio](https://www.frontendmentor.io/profile/pharaohmak)
+- [Shopify Partners](https://sleeping-pharaoh-tech.myshopify.com/)
+- [Fiverr Gigs](https://www.fiverr.com/makibrahim)
+- [Upwork Profile](https://www.upwork.com/freelancers/~01b95f15d26a433958)
 
 
 ## Feedback
