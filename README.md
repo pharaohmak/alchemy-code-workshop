@@ -1,4 +1,3 @@
-
 # Alchemy Code. Workshop
 
 This repository contains tutorial templates organized as directories, each representing a separate tutorial project. The templates are designed to provide a starting point for creating various types of projects, such as web applications, mobile apps, data visualizations, and more.
